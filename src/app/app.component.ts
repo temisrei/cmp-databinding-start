@@ -28,4 +28,12 @@ export class AppComponent {
   onChangeFirst() {
     this.serverElements[0].name = 'Changed!';
   }
+
+  onDestroyFirst() {
+    if (this.serverElements.length > 0) {
+      this.serverElements.splice(0, 1);
+    } else {
+      console.log('plz check if any server exists');
+    }
+  }
 }
